@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to Radio App</h1>
+        <div class="row mt-4">
+            <!-- Messaging Button -->
+            <div class="col-md-6">
+                <a href="{{ url_for('messaging') }}" class="btn btn-info btn-block"><i class="fas fa-comments"></i> Messaging</a>
+            </div>
+            <!-- File Transfer Button -->
+            <div class="col-md-6">
+                <a href="{{ url_for('file_transfer') }}" class="btn btn-primary btn-block"><i class="fas fa-file"></i> File Transfer</a>
+            </div>
+            <!-- Video Stream Button -->
+            <div class="col-md-6 mt-3">
+                <a href="{{ url_for('video_stream') }}" class="btn btn-success btn-block"><i class="fas fa-video"></i> Video Stream</a>
+            </div>
+            <!-- Audio Stream Button -->
+            <div class="col-md-6 mt-3">
+                <a href="{{ url_for('audio_stream') }}" class="btn btn-warning btn-block"><i class="fas fa-microphone"></i> Audio Stream</a>
+            </div>
+            <!-- Discover Devices Button -->
+            <div class="col-md-12 mt-4">
+                <a href="{{ url_for('discover_devices') }}" class="btn btn-dark btn-block"><i class="fas fa-network-wired"></i> Discover Devices</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
